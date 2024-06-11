@@ -1,6 +1,7 @@
-import {getSteps} from 'alon-rn-sdk';
+import {getActiveCaloriesBurned, getSteps} from 'alon-rn-sdk';
 import React, {useEffect} from 'react';
 import {
+  Platform,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -18,14 +19,20 @@ function App(): React.JSX.Element {
   const [output, setOutput] = React.useState([] as HealthValue[]);
 
   useEffect(() => {
-    getSteps()
-      .then(finalResults => {
-        setOutput(finalResults);
-        console.log(finalResults);
-      })
-      .catch(error => {
-        console.error(error);
+    if (Platform.OS === 'ios') {
+      getSteps()
+        .then(finalResults => {
+          setOutput(finalResults);
+          console.log(finalResults);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    } else if (Platform.OS === 'android') {
+      getActiveCaloriesBurned().then(finalResults => {
+        console.log(finalResults[0].energy);
       });
+    }
   }, []);
 
   const backgroundStyle = {

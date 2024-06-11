@@ -3123,13 +3123,14 @@ __metadata:
     "@react-native/typescript-config": 0.74.83
     "@types/react": ^18.2.6
     "@types/react-test-renderer": ^18.0.0
-    alon-rn-sdk: ^0.1.2
+    alon-rn-sdk: ^0.1.3
     babel-jest: ^29.6.3
     eslint: ^8.19.0
     jest: ^29.6.3
     prettier: 2.8.8
     react: 18.2.0
     react-native: 0.74.1
+    react-native-health: ^1.18.0
     react-test-renderer: 18.2.0
     typescript: 5.0.4
   languageName: unknown
@@ -3210,16 +3211,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"alon-rn-sdk@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "alon-rn-sdk@npm:0.1.2"
+"alon-rn-sdk@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "alon-rn-sdk@npm:0.1.3"
   dependencies:
     axios: ^1.7.2
     react-native-health: ^1.18.0
+    react-native-health-connect: ^2.0.3
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 16c812943ff42349d04ee2688d9badc3f71604414bc03a06817ba29ca15df9f9b4b16d3342d7855cde05a248c42511347291e3c49f42518c284fb18a6399c269
+  checksum: 6b37971e97858dadad9ffa2be0eea931fb311bd9570dfa63164dc17e2e0be8c01f69ba8c987aee0c3d75566945abb94b8e45fa07b73d5f7ce385ad9e3cd7e43f
   languageName: node
   linkType: hard
 
@@ -8196,6 +8198,17 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
+  languageName: node
+  linkType: hard
+
+"react-native-health-connect@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "react-native-health-connect@npm:2.0.3"
+  peerDependencies:
+    "@expo/config-plugins": ">= 6.0.2"
+    react: "*"
+    react-native: "*"
+  checksum: 01effe2f84173d3992ef41bad870811e7332dfb0e5f3792c0acf9f7726bce004368063c530c88ab512fcd19ee0c7f48fd4709e4fa4f044c0e5bbdc3156cf4bfa
   languageName: node
   linkType: hard
 
